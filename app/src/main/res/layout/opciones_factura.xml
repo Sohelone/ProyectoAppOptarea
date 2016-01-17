@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:background="@drawable/fondoboton"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:text="Seguros   "
+        android:id="@+id/seguros"
+        android:layout_below="@+id/telecom"
+        android:layout_alignStart="@+id/telecom"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:background="@drawable/fondoboton"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:text="asesoria   "
+        android:id="@+id/asesoria"
+        android:layout_below="@+id/seguros"
+        android:layout_alignStart="@+id/seguros"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:background="@drawable/fondoboton"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:text="Telefonia   "
+        android:id="@+id/telecom"
+        android:layout_marginTop="159dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:background="@drawable/fondoboton"
+        android:text="Energia   "
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:id="@+id/energia"
+        android:layout_marginBottom="76dp"
+        android:layout_alignBottom="@+id/telecom"
+        android:layout_alignStart="@+id/telecom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Seleccione un servicio"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textColor="@android:color/darker_gray"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="tú ahorras!"
+        android:id="@+id/textView4"
+        android:layout_marginTop="86dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textColor="@android:color/darker_gray"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="¡Nosotros trabajamos,"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp" />
+
+</RelativeLayout>

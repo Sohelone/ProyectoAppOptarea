@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Datos de tu empresa"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Persona de contacto"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:hint="Telefono" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="CIF"
+        android:textColor="@android:color/darker_gray"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignEnd="@+id/textView" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_boarder"
+        android:textColor="#ffffff"
+        android:textSize="17dp"
+        android:text="Enviar"
+        android:id="@+id/enviarInfo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:textAlignment="center"
+        android:text="+34"
+        android:focusableInTouchMode="false"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="33dp"
+        android:focusable="false"
+        android:layout_alignStart="@+id/editText" />
+</RelativeLayout>
