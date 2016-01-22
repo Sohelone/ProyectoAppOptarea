@@ -1,6 +1,8 @@
 package com.example.optarea.appoptarea;
 
-import android.content.Context;
+/**
+ * Created by Jose on 20/01/2016.
+ */
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.StrictMode;
@@ -16,7 +18,7 @@ import android.widget.ImageView;
 
 import static android.view.View.*;
 
-public class MainActivity extends AppCompatActivity {
+public class PantallaRegistro extends AppCompatActivity {
 
     //ImageView logo = (ImageView) findViewById(R.id.logo);
     /**
@@ -25,11 +27,9 @@ public class MainActivity extends AppCompatActivity {
      */
     // private GoogleApiClient client;
     EditText mail;
-    EditText password1;
-    EditText password2;
-    ImageView logo;
-    Button entrar;
-    CheckBox recordar;
+    EditText password;
+    Button aceptar;
+
 
 
     SharedPreferences sharedpreferences;
@@ -37,56 +37,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        sharedpreferences = getSharedPreferences("PreferenciasMain", Context.MODE_PRIVATE);
-        String confirmacion = sharedpreferences.getString("Registrado", "No");
-
-        if (confirmacion.equals("Si")){
-            setContentView(R.layout.pantalla_login);
-        }
-        else {
-            Intent actividadRegistro = new Intent(MainActivity.this, PantallaRegistro.class);
-            startActivity(actividadRegistro);
-            finish();
-        }
-
-        Log.i("ComprobarPreferencias", confirmacion);
-
-        //Toast.makeText(getApplicationContext(), confirmacion, Toast.LENGTH_LONG);
-
-       // setContentView(R.layout.pantalla_login);
+        setContentView(R.layout.pantalla_registro);
 
         mail = (EditText) findViewById(R.id.mail);
-        password1 = (EditText) findViewById(R.id.pass1);
-        password2 = (EditText) findViewById(R.id.pass2);
-        logo = (ImageView) findViewById(R.id.logo);
-        entrar = (Button) findViewById(R.id.entrar);
-        recordar = (CheckBox) findViewById(R.id.checkBox);
+        password = (EditText) findViewById(R.id.pass1);
+        aceptar = (Button) findViewById(R.id.aceptar);
 
-        entrar.setOnClickListener(infoClienteLayout);
+        aceptar.setOnClickListener(infoClienteLayout);
 
-
-
-
-
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
-                .permitAll().build();
-        StrictMode.setThreadPolicy(policy);
     }
+
     //Metodo para entrar la informacion al servidor
     private OnClickListener infoClienteLayout = new OnClickListener() {
         @Override
         public void onClick(View v) {
 
-            if(entrar.getText().toString().equals("Entrar") && recordar.isChecked()==true){
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString("Registrado", "No");
-                editor.commit();
-            }
+           //Aqui el envio de la info al server
+            //Bundle datosRegistro =
 
-            Log.i("ComprobarEncoded", sharedpreferences.getString("Registrado", "Si"));
-
-            Intent intent = new Intent(MainActivity.this, OpcionesFactura.class);
+            Intent intent = new Intent(PantallaRegistro.this, InfoCliente.class);
             startActivity(intent);
             finish();
         }
@@ -114,8 +83,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-
-

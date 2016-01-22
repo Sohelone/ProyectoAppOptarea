@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Email extends Activity implements View.OnClickListener {
+public class EmailDeUsuario extends Activity implements View.OnClickListener {
 
     EditText personsEmail, intro, personsName, stupidThings, hatefulAction,
             outro;

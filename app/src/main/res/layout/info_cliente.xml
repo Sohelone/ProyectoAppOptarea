@@ -21,7 +21,7 @@
         android:inputType="textPersonName"
         android:hint="Persona de contacto"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/personacontacto"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="72dp" />
@@ -31,10 +31,10 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/telefono"
         android:layout_marginTop="33dp"
-        android:layout_below="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
+        android:layout_below="@+id/personacontacto"
+        android:layout_alignEnd="@+id/personacontacto"
         android:hint="Telefono" />
 
     <EditText
@@ -45,9 +45,9 @@
         android:textColor="@android:color/darker_gray"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/CIF"
         android:layout_marginTop="33dp"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/telefono"
         android:layout_alignEnd="@+id/textView" />
 
     <Button
@@ -65,12 +65,12 @@
     <EditText
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
+        android:id="@+id/prefijo"
         android:textAlignment="center"
         android:text="+34"
         android:focusableInTouchMode="false"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/personacontacto"
         android:layout_marginTop="33dp"
         android:focusable="false"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_alignStart="@+id/personacontacto" />
 </RelativeLayout>

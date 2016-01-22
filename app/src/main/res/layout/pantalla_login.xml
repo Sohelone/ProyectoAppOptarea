@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.optarea.appoptarea.MainActivity"
+    android:background="#ffffff">
+
+
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Introduce tu correo"
+        android:ems="10"
+        android:id="@+id/mail"
+        android:layout_marginTop="98dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Introduce contraseña"
+        android:ems="10"
+        android:id="@+id/pass1"
+        android:layout_below="@+id/mail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp" />
+
+    EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Repite contraseña"
+        android:id="@+id/pass2"
+        android:layout_below="@+id/pass1"
+        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/pass1"
+        android:layout_marginTop="30dp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo"
+        android:clickable="false"
+        android:background="@drawable/logooptareabig"
+        android:layout_marginTop="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_boarder"
+        android:text="Entrar"
+        android:textColor="#ffffff"
+        android:textSize="17dp"
+        android:id="@+id/entrar"
+        android:enabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Recordarme"
+        android:button="@drawable/customcheckboxstyle"
+        android:id="@+id/checkBox"
+        android:layout_above="@+id/entrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp" />
+
+</RelativeLayout>

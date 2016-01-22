@@ -23,9 +23,11 @@ import android.widget.ImageView;
 import org.apache.http.params.HttpParams;
 
 import java.io.BufferedOutputStream;
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -39,7 +41,7 @@ import java.util.ArrayList;
 
 
 
-public class SubirImagen extends AppCompatActivity implements View.OnClickListener{
+public class SubirImagenPrueba extends AppCompatActivity implements View.OnClickListener{
 
     private static final int RESULT_LOAD_IMAGE = 1;
     ImageView imagen;
@@ -133,16 +135,14 @@ public class SubirImagen extends AppCompatActivity implements View.OnClickListen
 
             try{
                 con = (HttpURLConnection)url.openConnection();
-
                 // Activar método POST
-                con.setDoOutput(true);
-
+                //con.setDoOutput(true);
                 // Tamaño desconocido
                 con.setFixedLengthStreamingMode(0);
-
                 OutputStream out = con.getOutputStream();
                 // Usas tu método ingeniado para convertir el archivo a bytes
-                BufferedOutputStream bs = new BufferedOutputStream(out);
+                BufferedWriter bs = new BufferedWriter(new OutputStreamWriter(out, "UTF-8"));
+                bs.write(encoded);
                 out.flush();
                 out.close();
             } catch (IOException e) {
